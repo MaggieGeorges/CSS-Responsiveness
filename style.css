@@ -1,0 +1,41 @@
+.grid-container{
+    display: grid;
+    gap: 10px;
+    background-color: antiquewhite;
+    padding: 10px;
+    border-color: white;
+}
+
+.grid-item{
+    background-color: brown;
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.item1 {
+    grid-column: span 2;
+    grid-row: 1;
+}
+.item2 {
+    grid-column: 3;
+    grid-row: span 2;
+}
+.item5 {
+    grid-column: span 3;
+    grid-row: 3;
+}
+
+/* To adjust layout for screens with a max width */
+@media (max-width: 768px){
+    .grid-container{
+        grid-template-columns: 1fr;
+    }
+    .item1,
+    .item2,
+    .item5{
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
+
